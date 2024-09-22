@@ -9,7 +9,7 @@
 
 ## Summary
 
-This module add "Buy Now" button on product listing page, search result page, product view page to process directly checkout.
+This module add "Buy Now" button on Product Listing Page, Search Result Page, Product View Page to process directly checkout.
 
 
 ## Installation
@@ -41,9 +41,6 @@ bin/magento cache:flush
 3. Create a new cart and add item in cart when Click Buy Now.
  - This setting will create new cart add new item in the cart when click on “Buy Now” button. Once order placed  restore previous cart.
 
-### Notice
-
-<b>We don't support "Buy Now" button on product widegets, related, upsell, wishlist or any other places because it needs override core phtml files which is not the recommended solution. Please keep in note that most of the paid or free version of the Buy Now module overrides the core phtml files.</b>
 
 ### Use below code to add "Buy Now" button in custom place.
 
@@ -65,16 +62,19 @@ You can use above code where you want to show "Buy Now" button against the produ
 
 - PRODUCT DETAIL PAGE
 
-![Module Configuration Screen](media/slide-3.png)
+    ![Module Configuration Screen](media/slide-3.png)
 
 - PRODUCT LIST PAGE
 
-![Module Configuration Screen](media/slide-4.png)
+    ![Module Configuration Screen](media/slide-4.png)
 
 - PRODUCT SEARCH PAGE
 
-![Module Configuration Screen](media/slide-5.png)
+    ![Module Configuration Screen](media/slide-5.png)
 
+### Notice
+
+We don't support "Buy Now" button on product widegets, related, upsell, wishlist or any other places because it needs override core phtml files which is not the recommended solution. Please keep in note that most of the paid or free version of the Buy Now module overrides the core phtml files.
 
 ## License
 
