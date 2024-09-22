@@ -9,7 +9,29 @@
 
 ## Summary
 
-This module add "Buy Now" button on product view page and list page to process directly checkout.
+This module add "Buy Now" button on product listing page, search result page, product view page to process directly checkout.
+
+
+## Installation
+
+```
+composer require mdbhojwani/magento2-buy-now
+bin/magento module:enable Mdbhojwani_BuyNow
+bin/magento setup:upgrade
+bin/magento setup:di:compile
+bin/magento setup:static-content:deploy -f
+bin/magento cache:clean
+bin/magento cache:flush
+```
+
+## Configurations
+
+```
+1. Login to Magento Backend
+2. Navigate to Stores > Configurations > Mdbhojwani > Buy Now
+```
+
+![Module Configuration Screen](media/slide-1.png)
 
 ### Cart Actions
 1. Remove all cart item(s) when Click Buy Now.
@@ -39,42 +61,19 @@ You can use above code where you want to show "Buy Now" button against the produ
 
 ![Module Configuration Screen](media/slide-2.png)
 
-
 ### Frontend View
 
-<b>PRODUCT DETAIL PAGE</b>
+- PRODUCT DETAIL PAGE
 
 ![Module Configuration Screen](media/slide-3.png)
 
-<b>PRODUCT LIST PAGE</b>
+- PRODUCT LIST PAGE
 
 ![Module Configuration Screen](media/slide-4.png)
 
-<b>PRODUCT SEARCH PAGE</b>
+- PRODUCT SEARCH PAGE
 
 ![Module Configuration Screen](media/slide-5.png)
-
-
-## Installation
-
-```
-composer require mdbhojwani/magento2-buy-now
-bin/magento module:enable Mdbhojwani_BuyNow
-bin/magento setup:upgrade
-bin/magento setup:di:compile
-bin/magento setup:static-content:deploy -f
-bin/magento cache:clean
-bin/magento cache:flush
-```
-
-## Configurations
-
-```
-1. Login to Magento Backend
-2. Navigate to Stores > Configurations > Mdbhojwani > Buy Now
-```
-
-![Module Configuration Screen](media/slide-1.png)
 
 
 ## License
