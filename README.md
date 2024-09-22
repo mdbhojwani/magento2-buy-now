@@ -31,7 +31,7 @@ bin/magento cache:flush
 2. Navigate to Stores > Configurations > Mdbhojwani > Buy Now
 ```
 
-   ![Module Configuration Screen](media/slide-1.png)
+![Module Configuration Screen](media/slide-1.png)
 
 ### Cart Actions
 1. Remove all cart item(s) when Click Buy Now.
