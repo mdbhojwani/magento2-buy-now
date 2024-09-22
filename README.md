@@ -19,11 +19,11 @@ This module add "Buy Now" button on product view page and list page to process d
 3. Create a new cart and add item in cart when Click Buy Now.
  - This setting will create new cart add new item in the cart when click on “Buy Now” button. Once order placed  restore previous cart.
 
-# Notice
+### Notice
 
 <b>We don't support "Buy Now" button on product widegets, related, upsell, wishlist or any other places because it needs override core phtml files which is not the recommended solution. Please keep in note that most of the paid or free version of the Buy Now module overrides the core phtml files.</b>
 
-# Use below code to add "Buy Now" button in custom place.
+### Use below code to add "Buy Now" button in custom place.
 
 ``````
 $buyNowHtml = $this->getLayout()
@@ -40,7 +40,7 @@ You can use above code where you want to show "Buy Now" button against the produ
 ![Module Configuration Screen](media/slide-2.png)
 
 
-# Frontend View
+### Frontend View
 
 <b>PRODUCT DETAIL PAGE</b>
 
