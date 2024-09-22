@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category Mdbhojwani
+ * @package Mdbhojwani_BuyNow
+ * @author Manish Bhojwani <manishbhojwani3@gmail.com>
+ * @github https://github.com/mdbhojwani
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mdbhojwani_buynow>
+            <general>
+                <is_enabled>1</is_enabled>
+                <cart_actions>2</cart_actions>
+                <enable_list>0</enable_list>
+                <enable_view>0</enable_view>
+                <enable_search>0</enable_search>
+                <enable_advanced_search>0</enable_advanced_search>
+                <addtocart_id>product_addtocart_form</addtocart_id>
+                <button_title>Buy Now</button_title>
+                <custom_buynow_button_code><![CDATA[$buyNowHtml = $this->getLayout()
+    ->createBlock('Mdbhojwani\BuyNow\Block\Product\ListProduct')
+    ->setProduct($_item)
+    ->setTemplate('Mdbhojwani_BuyNow::buynow-list.phtml')
+    ->toHtml();
+echo $buyNowHtml;]]>
+                </custom_buynow_button_code>
+            </general>
+        </mdbhojwani_buynow>
+    </default>
+</config>

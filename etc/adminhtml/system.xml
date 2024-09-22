@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category Mdbhojwani
+ * @package Mdbhojwani_BuyNow
+ * @author Manish Bhojwani <manishbhojwani3@gmail.com>
+ * @github https://github.com/mdbhojwani
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mdbhojwani" translate="label" sortOrder="200">
+            <label>Mdbhojwani</label>
+        </tab>
+        <section id="mdbhojwani_buynow" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Buy Now</label>
+            <tab>mdbhojwani</tab>
+            <resource>Mdbhojwani_BuyNow::config_buynow</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="is_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Is Module Enabled?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="cart_actions" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cart Actions</label>
+                    <depends>
+                        <field id="mdbhojwani_buynow/general/is_enabled">1</field>
+                    </depends>
+                    <source_model>Mdbhojwani\BuyNow\Model\Config\Source\CartActions</source_model>
+                </field>
+                <field id="enable_list" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable On Product List Page</label>
+                    <depends>
+                        <field id="mdbhojwani_buynow/general/is_enabled">1</field>
+                    </depends>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enable_view" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable On Product Details Page</label>
+                    <depends>
+                        <field id="mdbhojwani_buynow/general/is_enabled">1</field>
+                    </depends>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enable_search" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable On Product Search Page</label>
+                    <depends>
+                        <field id="mdbhojwani_buynow/general/is_enabled">1</field>
+                    </depends>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enable_advanced_search" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable On Product Advanced Search Page</label>
+                    <depends>
+                        <field id="mdbhojwani_buynow/general/is_enabled">1</field>
+                    </depends>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="button_title" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Title</label>
+                    <depends>
+                        <field id="mdbhojwani_buynow/general/is_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="addtocart_id" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Addtocart form ID</label>
+                    <depends>
+                        <field id="mdbhojwani_buynow/general/is_enabled">1</field>
+                    </depends>
+                    <comment>Enter addtocart form id for product view page(Ex. product_addtocart_form). Check readme for more details.</comment>
+                </field>
+                <field id="custom_buynow_button_code" type="textarea" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1">
+                    <label>Custom Buy Now Button Code</label>
+                    <depends>
+                        <field id="mdbhojwani_buynow/general/is_enabled">1</field>
+                    </depends>
+                    <frontend_model>Mdbhojwani\BuyNow\Block\Adminhtml\System\Config\Field\Disable</frontend_model>
+                    <comment><![CDATA[Change <b>$_item</b>  to current product object. This code generates buy now button with new form so make sure don't copy this code into any other form.]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,14 @@
+<script>
+require([
+    'jquery',
+    'Magento_Checkout/js/action/get-totals',
+    'Magento_Customer/js/customer-data'
+], function ($, getTotalsAction, customerData) {
+    var sections = ['cart'];
+    /* Minicart reloading */
+    customerData.reload(sections, true);
+    /* Totals summary reloading */
+    var deferred = $.Deferred();
+    getTotalsAction([], deferred);
+});
+</script>
