@@ -11,7 +11,7 @@
 
 This module add "Buy Now" button on product view page and list page to process directly checkout.
 
-<b>Cart Actions</b>
+### Cart Actions
 1. Remove all cart item(s) when Click Buy Now.
  - This setting will remove all cart items and add new item in cart when click on “Buy Now” button.
 2. Keep other cart's item(s) when Click Buy Now.
