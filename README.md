@@ -31,7 +31,7 @@ bin/magento cache:flush
 2. Navigate to Stores > Configurations > Mdbhojwani > Buy Now
 ```
 
-    ![Module Configuration Screen](media/slide-1.png)
+   ![Module Configuration Screen](media/slide-1.png)
 
 ### Cart Actions
 1. Remove all cart item(s) when Click Buy Now.
@@ -56,7 +56,7 @@ echo $buyNowHtml;
 
 You can use above code where you want to show "Buy Now" button against the product. Please make sure don't copy this code to addtocart or any other form. Put this code after any `</form>`. Here is the screenshot of sample code of usage
 
-    ![Module Configuration Screen](media/slide-2.png)
+![Module Configuration Screen](media/slide-2.png)
 
 ### Frontend View
 
