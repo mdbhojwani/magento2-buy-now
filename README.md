@@ -28,7 +28,7 @@ bin/magento cache:flush
 
 ```
 1. Login to Magento Backend
-2. Navigate to Stores > Configurations > Mdbhojwani > Buy Now
+2. Navigate to Store > Configurations > Mdbhojwani > Buy Now
 ```
 
 ![Module Configuration Screen](media/slide-1.png)
